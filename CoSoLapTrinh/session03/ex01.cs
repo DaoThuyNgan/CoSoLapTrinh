@@ -314,6 +314,7 @@ namespace CoSoLapTrinh.session03
             Bai05();
             Bai11();
             Bai07();
+            Bai03();   
         }
     }
 }
