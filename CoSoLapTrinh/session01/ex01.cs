@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CoSoLapTrinh.session04
+namespace CoSoLapTrinh.session01
 {
     internal class ex01
     {
@@ -10,7 +10,7 @@ namespace CoSoLapTrinh.session04
         {
             Console.WriteLine("Hello, World!");
             Console.WriteLine("This is a simple program.");
-            Console.WriteLine("My name is Thuy Ngan")
+            Console.WriteLine("My name is Thuy Ngan");
         }
     }
 }

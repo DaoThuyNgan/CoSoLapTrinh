@@ -49,7 +49,7 @@ namespace CoSoLapTrinh.session02
 
             Console.Write("Enter temperature in Fahrenheit: ");
             double fahrenheit2 = Convert.ToDouble(Console.ReadLine());
-            double celsius2 = (fahrenheit2 - 1.8) / 32;
+            double celsius2 = (fahrenheit2 - 32) / 1.8;
             Console.WriteLine($"{fahrenheit2} F = {celsius2} C");
 
             // 6. Find the Size of data types
