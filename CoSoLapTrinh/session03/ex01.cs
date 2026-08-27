@@ -244,8 +244,68 @@ namespace CoSoLapTrinh.session03
                 Console.WriteLine($"Chi phi moi nguoi: {chiPhiMoiNguoi:N0} VNĐ");
 
             }
-
         
+        static void Bai03()
+        {
+            Console.Write("Nhập số tiền VNĐ: ");
+            if (!decimal.TryParse(Console.ReadLine(), out decimal soTienVND) || soTienVND <= 0)
+            {
+                Console.WriteLine("Lỗi: Số tiền VNĐ không hợp lệ!");
+                return;
+            }
+
+            Console.Write("Chọn ngoại tệ (1-USD, 2-EUR, 3-JPY, 4-GBP): ");
+            if (!int.TryParse(Console.ReadLine(), out int chon))
+            {
+                Console.WriteLine("Lỗi: Lựa chọn không hợp lệ!");
+                return;
+            }
+
+            // Tỷ giá và Tên ngoại tệ
+            decimal tyGia = 0m;
+            string tenNgoaiTe = "";
+
+            
+            if (chon == 1)
+            {
+                tenNgoaiTe = "USD";
+                tyGia = 25400m;
+            }
+            else if (chon == 2)
+            {
+                tenNgoaiTe = "EUR";
+                tyGia = 27200m;
+            }
+            else if (chon == 3)
+            {
+                tenNgoaiTe = "JPY";
+                tyGia = 165m;
+            }
+            else if (chon == 4)
+            {
+                tenNgoaiTe = "GBP";
+                tyGia = 32100m;
+            }
+            else
+            {
+                Console.WriteLine("Lỗi: Ngoại tệ chọn không nằm trong danh sách (1-4)!");
+                return;
+            }
+
+            // Tính toán phí và tiền đổi
+            decimal phiDichVu = soTienVND * 0.005m;
+            decimal soTienThucTe = soTienVND - phiDichVu;
+            decimal soTienNgoaiTe = soTienThucTe / tyGia;
+
+            // In kết quả
+           
+            Console.WriteLine($"Phí dịch vụ (0.5%): {phiDichVu:N0} VNĐ");
+            Console.WriteLine($"Số tiền VNĐ tính đổi: {soTienThucTe:N0} VNĐ");
+            Console.WriteLine($"Số tiền {tenNgoaiTe} nhận được: {soTienNgoaiTe:F2} {tenNgoaiTe}");
+        }
+        
+
+
         public static void Main(string[] args)
         {
             Bai01();
