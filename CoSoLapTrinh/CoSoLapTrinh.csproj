@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CoSoLapTrinh.session02.ex01</StartupObject>
+    <StartupObject>CoSoLapTrinh.session04.ex01</StartupObject>
   </PropertyGroup>
 
 </Project>
